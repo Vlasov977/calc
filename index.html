@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- wp_head() -->
+  <title>Калькулятор</title>
+  <link rel="stylesheet" href="http://bootstraptema.ru/plugins/2016/bootsnav/bootsnav.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/business-frontpage.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/main.css">
+  <!-- script | dynamic -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    </head>
+
+<body>
+<div class="container">
+
+  <nav class="navbar navbar-default navbar-mobile bootsnav">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-menu">
+      <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
+        <li alt="HOME"><a href="#">Home</a></li>
+        <li alt="ABOUT US"><a href="#">About Us</a></li>
+        <li class="dropdown" alt="SHORTCODES">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">menu</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Custom Menu</a></li>
+            <li><a href="#">Custom Menu</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Sub Menu</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Custom Menu</a></li>
+                <li><a href="#">Custom Menu</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Sub Menu</a>
+                  <ul class="dropdown-menu multi-dropdown">
+                    <li><a href="#">Custom Menu</a></li>
+                    <li><a href="#">Custom Menu</a></li>
+                    <li><a href="#">Custom Menu</a></li>
+                    <li><a href="#">Custom Menu</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Custom Menu</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Custom Menu</a></li>
+            <li><a href="#">Custom Menu</a></li>
+            <li><a href="#">Custom Menu</a></li>
+            <li><a href="#">Custom Menu</a></li>
+          </ul>
+        </li>
+        <li class="dropdown" alt="PAGES">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Custom Menu</a></li>
+            <li><a href="#">Custom Menu</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sub Menu</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Custom Menu</a></li>
+                <li><a href="#">Custom Menu</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sub Menu</a>
+                  <ul class="dropdown-menu multi-dropdown">
+                    <li><a href="#">Custom Menu</a></li>
+                    <li><a href="#">Custom Menu</a></li>
+                    <li><a href="#">Custom Menu</a></li>
+                    <li><a href="#">Custom Menu</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Custom Menu</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Custom Menu</a></li>
+            <li><a href="#">Custom Menu</a></li>
+            <li><a href="#">Custom Menu</a></li>
+            <li><a href="#">Custom Menu</a></li>
+          </ul>
+        </li>
+        <li alt="PORTFOLIO"><a href="#">Portfolio</a></li>
+        <li alt="CONTACT US"><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+</div><!-- ./container -->
+
+
+<div class="l-container">
+  <div class="container__page">
+    <div class="container__content">
+      <div class="b-menutablet js-sidebar-show">
+        <div class="menutablet__icon">&nbsp;</div>
+      </div>
+      <div class="column column_lc column_cr">
+        <div class="column__center">
+          <div class="" sklayout="content">
+
+
+            <div class="b-calc">
+              <form>
+
+                <div class="calc__label-left">
+                  <div class="calc__col calc__param"><label style=" margin-left:70px;" class="calc__label">Площадь помещения (м2): </label>
+                    <div class="calc__inputwrap"><input value="10" id="block_0_square" type="number"></div>
+
+                  </div>
+
+                  <div class="calc__col calc__param"><label style=" margin-left:70px;" class="calc__label">Высота сухой стяжки: </label>
+                    <div class="calc__inputwrap"><input value="10" id="block_0_height" type="number"></div>
+                    <div style=" display:none" class="calc__screed-heigh--bg">
+                      <div class="calc__screed-heigh js-calc-screed-heigh"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="calc__hr"> </div>
+                <div style=" display:none" class="calc__checkbox">
+                  <div class="calc__col">
+                    <div class="calc__inputwrap"><label><input id="dostavka" type="checkbox"><span> Доставка </span></label></div>
+                  </div>
+
+                  <div class="calc__col">
+                    <div class="calc__inputwrap"><label><input id="destruction" type="checkbox"><span> Демонтаж пола </span></label></div>
+                  </div>
+
+                  <div class="calc__col">
+                    <div class="calc__inputwrap"><label><input id="construction" type="checkbox"><span> Укладка напольного покрытия </span></label></div>
+                  </div>
+                </div>
+                <div class="calc__info">
+                  <div id="dostavka_block" class="calc__dostavka" style="display: none">
+                    <h5>Доставка материалов</h5>
+                    <div class="calc__col">
+                      <div class="calc__inputwrap"><label><input id="block_1_lift" type="checkbox" name="block_1_lift" value="Да" checked=""><span> Лифт </span></label></div>
+                    </div>
+                    <!-- <div class="calc__col calc__label-left"><label class="calc__label">Лифт: </label>
+                        <div class="calc__inputwrap">
+                            <label></label><input name="block_1_lift" id="block_1_lift"  type="checkbox" value="Да"/>
+                        </div>
+                    </div> -->
+                    <div class="calc__hr"> </div>
+                  </div>
+                  <div id="destruction_block" style="display:none" class="calc__destruction">
+                    <h5>Демонтаж старого пола</h5>
+                    <div class="calc__col calc__label-left calc__info-item"><label class="calc__label">Тип пола: </label>
+                      <div class="calc__inputwrap calc__param">
+                        <select id="block_2_pol_type">
+                          <option conteriner="30" value="1">Деревянное основание (с песком)</option>
+                          <option conteriner="40" value="2">Деревянное основание (без песка)</option>
+                          <option conteriner="50" value="4">Паркет на битуме (без стяжки)</option>
+                          <option conteriner="20" value="3">Паркет на битуме (со стяжкой)</option>
+                          <option conteriner="20" value="5">Бетонная стяжка</option>
+                          <option conteriner="50" value="6">Линолеум, ковролин и т.д. (с клеем)</option>
+                          <option conteriner="50" value="7">Линолеум, ковролин и т.д. (без клея)</option>
+                          <option conteriner="40" value="8">Ламинат, паркетная доска и т.д. (на подложке)</option>
+                          <option conteriner="40" value="9">Керамическая плитка</option>
+
+                        </select>
+                      </div>
+                    </div>
+                    <div class="calc__col calc__label-left calc__info-item">
+                      <div class="calc__inputwrap">
+                        <label class="calc__label"><input name="block_2_vivoz" type="checkbox" value="да"> <span> Вывоз мусора: </span></label>
+                      </div>
+                      <!-- <div class="calc__inputwrap">
+                          <input name="block_2_vivoz" type="checkbox" value="да"/>
+                      </div> -->
+                    </div>
+                    <div class="calc__hr"> </div>
+                  </div>
+                  <div id="construction_block" style="display:none">
+                    <h5>монтаж напольного покрытия</h5>
+                    <div class="calc__col calc__label-left calc__info-item"><label class="calc__label">Тип пола: </label>
+
+                      <div class="calc__inputwrap calc__param">
+                        <select id="block_3_pol_type">
+                          <option value="1">Ламинат – прямая укладка</option>
+                          <option value="2">Ламинат – диагональная укладка</option>
+                          <option value="3">Паркетная доска – прямая укладка</option>
+                          <option value="4">Паркетная доска – диагональная укладка</option>
+                          <option value="5">Линолеум, ковролин (включая шпаклевку стыков листов)</option>
+                          <option value="6">Настил фанеры в один слой</option>
+                          <option value="7">Керамическая плитка – прямая укладка</option>
+                          <option value="8">Керамическая плитка – диагональная укладка</option>
+                          <option value="9">Массив – прямая укладка</option>
+                          <option value="10">Массив – диагональная укладка</option>
+
+                        </select>
+                      </div>
+                    </div>
+                    <div class="calc__hr"> </div>
+                  </div>
+                </div>
+              </form>
+              <input type="hidden" id="total_materials" value="13820">
+              <div class="calc__bottom"><button id="go_button" onclick="CountMoney(); return false;" class="calc__btn">Рассчитать стоимость</button></div>
+              <div class="b-calc-table">
+                <div style="" id="result_block">
+                  <h3>Стоимость сухой стяжки пола</h3>
+                  <h4>Материалы:</h4>
+                  <table>
+                    <tbody><tr>
+                      <th>Наименование</th>
+                      <th>Единица измерения</th>
+                      <th>Количество</th>
+                      <th>Стоимость</th>
+                      <th>Сумма</th>
+                    </tr>
+                    <tr style="" class="tr-material" id="js_element_knauf">
+                      <td style="text-align: left;">Элемент пола Knauf</td>
+                      <td>лист -шт.</td>
+                      <td class="td-material mater_1_count">16</td>
+                      <td>330</td>
+                      <td class="td-material mater_1_total">5280</td>
+                    </tr>
+                    <tr class="tr-material" id="js_type_compevit">
+                      <td style="text-align: left;">Сухая засыпка</td>
+                      <td>мешок 40 л.</td>
+                      <td class="td-material mater_2_count">27</td>
+                      <td>280</td>
+                      <td class="td-material mater_2_total">7560</td>
+                    </tr>
+                    <tr class="tr-material">
+                      <td style="text-align: left;">Клей ПВА</td>
+                      <td>кг</td>
+                      <td class="td-material" id="mater_3_count">1</td>
+                      <td>300</td>
+                      <td class="td-material" id="mater_3_total">300</td>
+                    </tr>
+                    <tr class="tr-material">
+                      <td style="text-align: left;">Кромочная лента</td>
+                      <td>рулон 20 метров</td>
+                      <td class="td-material" id="mater_4_count">1</td>
+                      <td>300</td>
+                      <td class="td-material" id="mater_4_total">300</td>
+                    </tr>
+                    <tr class="tr-material">
+                      <td style="text-align: left;">Саморезы (за 10 штук)</td>
+                      <td>шт</td>
+                      <td class="td-material" id="mater_5_count">200</td>
+                      <td>0.7</td>
+                      <td class="td-material" id="mater_5_total">140</td>
+                    </tr>
+                    <tr class="tr-material">
+                      <td style="text-align: left;">Пленка</td>
+                      <td>м2</td>
+                      <td class="td-material" id="mater_6_count">12</td>
+                      <td>20</td>
+                      <td class="td-material" id="mater_6_total">240</td>
+                    </tr>
+                    <tr class="uslugi_table tr-material" id="usluga_dostavka" style="display: none">
+                      <td style="text-align: left;">Доставка материала</td>
+                      <td>тонна</td>
+                      <td id="dostavka_kolvo">0</td>
+                      <td id="dostavka_price">0</td>
+                      <td id="dostavka_total" class="">0</td>
+                    </tr>
+                    </tbody></table>
+                  <div style="text-align: right; font-weight: bold;">
+                    <p style="font-size: 16px;">
+                      <span id="material_text">Стоимость материалов:</span>
+                      <span id="materials_price">13820</span> ₽</p>
+                  </div>
+                  <h4>Услуги:</h4>
+
+                  <table>
+                    <tbody><tr>
+                      <th>Наименование</th>
+                      <th>Единица измерения</th>
+                      <th>Количество</th>
+                      <th>Стоимость</th>
+                      <th>Сумма</th>
+                    </tr>
+                    <tr class="uslugi_table" id="usluga_montaj" style="">
+                      <td style="text-align: left;">Монтаж сухой стяжки</td>
+                      <td>м2</td>
+                      <td id="montaj_kolvo">10</td>
+                      <td id="montaj_price">820</td>
+                      <td id="montaj_total" class="js_usluga">8200</td>
+                    </tr>
+                    <tr class="uslugi_table" id="uslugi_arenda" style="display: table-row;">
+                      <td style="text-align: left;">Аренда инструмента</td>
+                      <td>день</td>
+                      <td id="arenda_kolvo">1</td>
+                      <td>0</td>
+                      <td class="calc__sale">Бесплатно</td>
+                    </tr>
+                    <tr class="uslugi_table" style="display: none">
+                      <td style="text-align: left;">Доставка материала</td>
+                      <td>тонна</td>
+                      <td id="dostavka_kolvo">0</td>
+                      <td id="dostavka_price">0</td>
+                      <td id="dostavka_total" class="js_usluga">0</td>
+                    </tr>
+                    <tr class="uslugi_table" id="usluga_demontaj" style="display: none">
+                      <td style="text-align: left;">Демонтаж</td>
+                      <td>м2</td>
+                      <td id="demontaj_kolvo">0</td>
+                      <td id="demontaj_price">0</td>
+                      <td id="demontaj_total" class="js_usluga">0</td>
+                    </tr>
+                    <tr class="uslugi_table" id="usluga_vivoz" style="display: none">
+                      <td style="text-align: left;">Вывоз мусора после демонтажных работ</td>
+                      <td>контейнер 8 м3</td>
+                      <td id="musor_kolvo">0</td>
+                      <td id="musor_price">0</td>
+                      <td id="musor_total" class="js_usluga">0</td>
+                    </tr>
+                    <tr class="uslugi_table" id="usluga_ukladka" style="display: none">
+                      <td style="text-align: left;">Укладка</td>
+                      <td>м2</td>
+                      <td id="uklad_kolvo">0</td>
+                      <td id="uklad_price">0</td>
+                      <td id="uklad_total" class="js_usluga">0</td>
+                    </tr>
+                    </tbody></table>
+                  <div style="text-align: right; font-weight: bold;"><p style="font-size: 17px;">Стоимость услуг: <span id="uslugi_price">8200</span> ₽</p></div>
+                  <div style="text-align: right; font-weight: bold;"><p style="font-size: 24px;">ИТОГО: <span id="itogo_price">22020</span> ₽</p></div>
+                </div>
+              </div>
+
+
+
+
+              <input class="form__cptch_country" type="text" name="cptch_country" value="">
+              <input class="form__mail_c" type="text" name="mail_c">
+
+              <input type="hidden" name="cmd" value="send">
+              <input type="hidden" name="form_id" id="form_id" value="53">
+              <input type="hidden" name="label" value="formCalculateContext">
+              <input type="hidden" name="section" value="333">
+              <input type="hidden" name="ajaxShow" value="">
+              <input type="hidden" class="_rules" value="{&quot;rules&quot;:{&quot;person&quot;:{&quot;required&quot;:true,&quot;maxlength&quot;:&quot;255&quot;},&quot;phone&quot;:{&quot;required&quot;:true,&quot;maxlength&quot;:&quot;255&quot;},&quot;email&quot;:{&quot;required&quot;:false,&quot;maxlength&quot;:&quot;255&quot;,&quot;email&quot;:true},&quot;primechaniya_to_main_form&quot;:{&quot;required&quot;:false,&quot;maxlength&quot;:&quot;25500&quot;},&quot;adres&quot;:{&quot;required&quot;:false,&quot;maxlength&quot;:&quot;255&quot;},&quot;captcha&quot;:{&quot;required&quot;:1,&quot;maxlength&quot;:50,&quot;digits&quot;:1},&quot;agreed&quot;:{&quot;required&quot;:1}}}">
+
+            </div>
+          </div>
+
+
+          <div id="price_vals" style="display:none">
+
+            <!--Цены по монтажу сухой стяжки:-->
+            <input type="hidden" id="price_construct_10" value="1500">
+            <input type="hidden" id="price_construct_20" value="820">
+            <input type="hidden" id="price_construct_30" value="720">
+            <input type="hidden" id="price_construct_40" value="400">
+
+            <!--1. Монтаж сухой стяжки с доп.слоем-->
+            <input type="hidden" id="price_construct_dop_10" value="1200">
+            <input type="hidden" id="price_construct_dop_20" value="800">
+            <input type="hidden" id="price_construct_dop_30" value="700">
+            <input type="hidden" id="price_construct_dop_40" value="550">
+
+            <!--Цены по демонтажным работам:-->
+            <!--деревянный с песком-->
+            <input type="hidden" id="price_destruct_1_20" value="550">
+            <input type="hidden" id="price_destruct_1_30" value="450">
+
+            <!--деревянный без песка-->
+            <input type="hidden" id="price_destruct_2_20" value="400">
+            <input type="hidden" id="price_destruct_2_30" value="300">
+
+            <!--битумная стяжка-->
+            <input type="hidden" id="price_destruct_3_20" value="700">
+            <input type="hidden" id="price_destruct_3_30" value="600">
+
+            <!--битум без стяжки-->
+            <input type="hidden" id="price_destruct_4_20" value="300">
+            <input type="hidden" id="price_destruct_4_30" value="200">
+
+            <!--бетонная стяжка-->
+            <input type="hidden" id="price_destruct_5_20" value="800">
+            <input type="hidden" id="price_destruct_5_30" value="600">
+
+            <!--линолиум ковролин с клеем-->
+            <input type="hidden" id="price_destruct_6_20" value="300">
+            <input type="hidden" id="price_destruct_6_30" value="200">
+
+            <!--линолейм без клеем-->
+            <input type="hidden" id="price_destruct_7_20" value="200">
+            <input type="hidden" id="price_destruct_7_30" value="150">
+
+            <!--ламинат на подложке-->
+            <input type="hidden" id="price_destruct_8_20" value="250">
+            <input type="hidden" id="price_destruct_8_30" value="200">
+
+            <!--керамическая плитк-->
+            <input type="hidden" id="price_destruct_9_20" value="400">
+            <input type="hidden" id="price_destruct_9_30" value="300">
+
+            <!--Цены на укладку напольных покрытий-->
+
+            <!--аминат, прямая укладка до 20 м2 вкл-->
+            <input type="hidden" id="price_uklad_1_20" value="450">
+
+            <!--2. Ламинат, прямая укладка свыше 20 м2-->
+            <input type="hidden" id="price_uklad_1_30" value="350">
+
+            <!--3. Ламинат диагональная укладка до 20 м2 вкл.-->
+            <input type="hidden" id="price_uklad_2_20" value="550">
+
+            <!--4. Ламинат диагональная укладка свыше 20 м2-->
+            <input type="hidden" id="price_uklad_2_30" value="450">
+
+            <!--5. Паркетная доска прямая укладка до 20 м2 вкл-->
+            <input type="hidden" id="price_uklad_3_20" value="550">
+
+            <!--6. Паркетная доска прямая укладка свыше 20 м2-->
+            <input type="hidden" id="price_uklad_3_30" value="450">
+
+            <!--7. Паркетная доска диагональная укладка до 20 м2 вкл-->
+            <input type="hidden" id="price_uklad_4_20" value="700">
+
+            <!--8. Паркетная доска диагональная укладка свыше 20 м2-->
+            <input type="hidden" id="price_uklad_4_30" value="600">
+
+            <!--9. Линолеум, ковролин вкл.шпаклевку стыков до 20 м2 вкл. -->
+            <input type="hidden" id="price_uklad_5_20" value="600">
+
+            <!--10. Линолеум, ковролин вкл.шпаклевку стыков свыше 20 м2-->
+            <input type="hidden" id="price_uklad_5_30" value="400">
+
+            <!--11. Настил фанеры в один слой до 20 м2 вкл.-->
+            <input type="hidden" id="price_uklad_6_20" value="300">
+
+            <!--12. Настил фанеры в один слой свыше 20 м2-->
+
+            <input type="hidden" id="price_uklad_6_30" value="200">
+            <!--ерамическая плитка прямая укладка до 10 м2 вкл.-->
+            <input type="hidden" id="price_uklad_7_20" value="1000">
+
+            <!--14. Керамическая плитка прямая укладка свыше 10 м2-->
+            <input type="hidden" id="price_uklad_7_30" value="900">
+
+            <!--15. Керамическая плитка диагональная укладка до 10 м2 вкл.-->
+            <input type="hidden" id="price_uklad_8_20" value="1200">
+
+            <!--16. Керамическая плитка диагональная укладка свыше 20 м2-->
+            <input type="hidden" id="price_uklad_8_30" value="1000">
+
+            <!--17. Массив прямя укладка о 20 м2 вкл. -->
+            <input type="hidden" id="price_uklad_9_20" value="1000">
+            <input type="hidden" id="price_uklad_9_30" value="800">
+
+            <!--18. Массив диагональная укладка свыше 20 м2 -->
+            <input type="hidden" id="price_uklad_10_20" value="1200">
+            <input type="hidden" id="price_uklad_10_30" value="1000">
+
+
+            <!--Цены на материалы-->
+            <!--1. Элемент пола-->
+            <input type="hidden" id="price_mater_1" value="330">
+            <!--2. Сухая засыпка Компэвит-->
+            <input type="hidden" id="price_mater_2" value="280">
+            <!--3. Клей ПВА-->
+            <input type="hidden" id="price_mater_3" value="300">
+            <!--4. Саморезы-->
+            <input type="hidden" id="price_mater_4" value="7">
+            <!--5. Кромочная лента-->
+            <input type="hidden" id="price_mater_5" value="300">
+            <!--6. Пленка-->
+            <input type="hidden" id="price_mater_6" value="20">
+            <!--7. Гипсоволокнистый лист однослойный-->
+            <input type="hidden" id="price_mater_7" value="250">
+            <!--7. ГСП лист однослойный-->
+            <input type="hidden" id="price_mater_68" value="310">
+
+            <!--Доставка-->
+            <input type="hidden" id="price_dostavka_1" value="2500">
+
+            <!--Разгрузка-->
+            <!--1. Лифт-->
+            <input type="hidden" id="price_razgruz_1" value="1500">
+            <!--2. Без лифт-->
+            <input type="hidden" id="price_razgruz_2" value="2000">
+
+            <!--вес материалов-->
+            <!--Элемент пола-->
+            <input type="hidden" id="price_ves_1" value="18">
+            <!--Сухая засыпка Компэвит-->
+            <input type="hidden" id="price_ves_2" value="24">
+            <!--Мусор за 8 м2 -->
+            <input type="hidden" id="musor_1" value="4500">
+            <!--Мусор за 8 м2 по области-->
+            <input type="hidden" id="musor_2" value="5500">
+
+
+          </div>
+          <script>
+
+            // У типа работ "Премиум" минимальная высота сухой стяжки 5 см.
+            $("input[name='work_type']").on('change', function(){
+              if ($("input[name='work_type']:checked").val() == 'premium') {
+
+                if ($('.js-height_option_4').prop('selected'))
+                  $('.js-height_option_5').prop('selected', 1);
+
+                $('.js-height_option_4').prop('disabled', 1);
+              } else
+                $('.js-height_option_4').prop('disabled', false);
+            });
+            $("input[name='work_type']").first().prop('checked', 1); // Выбрать всегда тип работ Эконом, что бы из кэша не восстановился
+
+
+            $(document).ready(function() {
+              $("textarea[name='primechaniya_to_main_form']").parent().parent().hide();
+              $(".js-form_calculate").hide();
+            });
+            $('#dostavka').click(function(){
+
+              if ($('#dostavka').prop("checked")===true){
+                $('#dostavka_block').show();
+              } else {
+                $('#dostavka_block').hide();
+              }
+            });
+            $('#destruction').click(function(){
+              if ($('#destruction').prop("checked")===true){
+                $('#destruction_block').show();
+              } else {
+                $('#destruction_block').hide();
+              }
+            });
+            $('#construction').click(function(){
+              if ($('#construction').prop("checked")===true){
+                $('#construction_block').show();
+              } else {
+                $('#construction_block').hide();
+              }
+            });
+
+            function validateFields(){
+
+              var valid = 1;
+              if ($("#block_0_square").val()<1 || $("#block_0_square").val()=='')
+                valid = 0;
+
+              if ($("#block_0_height").val() < 4 || $("#block_0_square").val() == '') {
+                valid = 0;
+              }
+
+              if (valid == 1){
+                return true;
+              } else {
+                return false;
+              }
+            }
+
+            //Кнопка расчета
+            function CountMoney(){
+
+              if (validateFields() === true){
+
+                $("#result_block").show();
+                $(".js-form_calculate").show();
+
+                $(".td-material").text(0);
+                $(".uslugi_table").hide();
+                $(".js_usluga").text(0);
+                var total_weight = 0;
+
+                var total_money = 0;
+                //получим площадь помещения
+                var construct_square = $('#block_0_square').val();
+                //высота сухой стяжки
+                var styuj = $('#block_0_height').val();
+
+                // Тип работ
+                var work_type = 'standart';
+                var add_worck_type = (work_type=='premium') ? '_prem' : '';
+
+                // Рассчёт аренды инструментов
+                if (!$('#dostavka').prop("checked") && !$('#destruction').prop("checked") && !$('#construction').prop("checked")) {
+                  $("#uslugi_arenda").show();
+                  $("#arenda_kolvo").text(Math.ceil(construct_square/20));
+                }
+
+                if (styuj<12){
+                  //без дополнительно слоя
+
+                  var construct_money_price = Math.ceil(construct_square/10);
+
+                  construct_money_price = construct_money_price*10;
+
+                  if (construct_money_price>30){
+                    construct_money_price = 40;
+                  }
+
+                  //стоимость сухой стяжки в зависимости от цены и типа работ
+                  //   var construct_price = $('#price_construct_'+construct_money_price+add_worck_type).val();
+
+                  if (construct_square <= 6) { var construct_price = 1500; }
+                  if (construct_square >= 7 && construct_square >= 9)  { var construct_price = 820; }
+                  if (construct_square >= 10 && construct_square >= 20)  { var construct_price = 720; }
+                  if (construct_square >=21 )  { var construct_price = 500; }
+
+                  //рассчитаем общую стоимость
+                  var temp_price = construct_square*construct_price;
+
+                  $("#montaj_kolvo").text(construct_square);
+
+                  //спц обыспыливание поля вкючается при премиум
+                  // $("#obesp_kolvo").text(construct_square);
+
+                  //ст-сть стяжки за ед и общее
+                  $("#montaj_price").text(construct_price);
+                  $("#montaj_total").text(temp_price);
+
+                  //показывает услуги монтажа
+                  $("#usluga_montaj").show();
+                  //количество в кг
+                  total_weight = addMaterials(total_weight,construct_square,styuj);
+
+                  total_money = total_money+parseInt(temp_price);
+                  //расчет материалов
+                } else {
+                  //с дополнительным слоем
+                  var construct_money_price = Math.ceil(construct_square/10);
+
+                  construct_money_price = construct_money_price*10;
+
+                  if (construct_money_price>30){
+                    construct_money_price = 40;
+                  }
+                  //   var construct_price = $('#price_construct_dop_'+construct_money_price+add_worck_type).val();
+
+                  if (construct_square <= 6) { var construct_price = 1500; }
+                  if (construct_square >= 7 && construct_square >= 9)  { var construct_price = 820; }
+                  if (construct_square >= 10 && construct_square >= 20)  { var construct_price = 720; }
+                  if (construct_square >=21 )  { var construct_price = 500; }
+
+
+
+
+                  //рассчитаем стоимость
+                  var temp_price = construct_square*construct_price;
+                  $("#montaj_kolvo").text(construct_square);
+                  $("#montaj_price").text(construct_price);
+                  $("#montaj_total").text(temp_price);
+                  $("#usluga_montaj").show();
+                  total_money = total_money+parseInt(temp_price);
+                  //добавим лист ГВЛВ
+
+                  var list_price = $('#price_mater_7').val();
+                  var list_kolvo = construct_square/ 1.44;
+
+                  list_kolvo = list_kolvo+1;
+                  temp_price = list_kolvo*list_price;
+
+                  total_weight = addMaterials(total_weight,construct_square,styuj);
+
+                  //добавили к цене листы
+                  total_money = total_money+parseInt(temp_price);
+
+                }
+
+                //если включен демонтаж пола
+                if ($("#destruction").prop("checked")===true) {
+                  //ДЕМОНТАЖ
+                  //площадь демонтажа
+                  var destruction_square = construct_square;
+                  //тип покрытия
+                  var destr_type = $('#block_2_pol_type option:selected').val();
+
+                  var destruct_money_price = Math.ceil(destruction_square / 10);
+
+                  destruction_money_price = destruct_money_price * 10;
+
+                  if (destruction_money_price > 20) {
+                    destruction_money_price = 30;
+                  } else {
+                    destruction_money_price = 20;
+                  }
+
+                  var destruction_price = $("#price_destruct_" + destr_type + "_" + destruction_money_price).val();
+
+                  temp_price = destruction_square * destruction_price;
+                  $("#demontaj_kolvo").text(destruction_square);
+                  $("#demontaj_price").text(destruction_price);
+                  $("#demontaj_total").text(temp_price);
+                  $("#usluga_demontaj").show();
+                  total_money = total_money + parseInt(temp_price);
+
+                  var tarif_type = 1;
+
+                  var tarif = $("#musor_" + tarif_type).val();
+
+                  //Делим площадь демонтажа на объем одного контейнера
+
+                  // зависимости от демонтируемого материала в контейнер влезает разное кол-во мусора
+                  var cont_capacity = $("#block_2_pol_type option:selected").attr('conteriner');
+
+                  var temp_cont = destruction_square / cont_capacity;
+                  temp_money = Math.ceil(temp_cont) * tarif;
+                  $("#musor_kolvo").text(Math.ceil(temp_cont));
+                  $("#musor_price").text(tarif);
+                  $("#musor_total").text(temp_money);
+
+                  $("#usluga_vivoz").show();
+
+                  total_money = total_money + parseInt(temp_money);
+                }
+
+                //если включена доставка
+                if ($("#dostavka").prop("checked")) {
+
+                  //ДОСТАВКА
+                  var car_price = $('#price_dostavka_1').val();
+
+                  var za_mkad = $('#block_1_mkad').val();
+                  //выБираем минимальный тариф
+                  temp_price = 0;
+
+                  total_money = total_money + total_weight*parseInt(car_price)+temp_price;
+
+
+                  var lift_price = $("#price_razgruz_2").val();
+
+                  var lift_flag = $("#block_1_lift").prop("checked");
+                  if (lift_flag===true){
+                    lift_price = $("#price_razgruz_1").val();
+                  }
+                  //перевод в тонны
+                  total_weight_lift = total_weight/1000;
+
+                  total_money_lift = total_weight_lift * lift_price;
+
+                  if (total_money_lift<1500){
+                    total_money_lift = 1500;
+                  }
+
+                  //todo непонятно как писать!!!
+                  $("#dostavka_kolvo").text(total_weight/1000);
+
+                  $("#dostavka_price").text(Math.ceil((parseInt(car_price) + parseInt(temp_price)) / total_weight*1000) + parseInt(total_money_lift));
+                  $("#dostavka_total").text(parseInt(car_price) + parseInt(temp_price) + parseInt(total_money_lift));
+
+                  var temp_total_materials = $("#total_materials").val();
+
+                  $("#total_materials").val(parseInt($("#total_materials").val())+parseInt($("#dostavka_total").text()));
+                  $("#material_text").text('Стоимость материалов с доставкой от:');
+                  $("#usluga_dostavka").show();
+
+                } else {
+                  $("#material_text").text('Стоимость материалов:');
+                }
+                //УКЛАДКА НАПОЛЬНОГО ПОКРЫТИЯ
+
+                //площадь
+                if ($("#construction").prop("checked")===true) {
+                  var ukladka_square = construct_square;
+                  //тип покрытия
+                  var uklad_type = $('#block_3_pol_type option:selected').val();
+
+                  var uklad_money_price = Math.ceil(ukladka_square / 10);
+
+                  var ukladka_money_price = uklad_money_price * 10;
+
+                  if (ukladka_money_price > 20) {
+                    ukladka_money_price = 30;
+                  } else {
+                    ukladka_money_price = 20;
+                  }
+
+                  var ukladka_price = $("#price_uklad_" + uklad_type + "_" + ukladka_money_price).val();
+
+                  temp_price = ukladka_square * ukladka_price;
+                  $("#uklad_kolvo").text(ukladka_square);
+                  $("#uklad_price").text(ukladka_price);
+                  $("#uklad_total").text(temp_price);
+
+                  $("#usluga_ukladka").show();
+                  total_money = total_money + parseInt(temp_price);
+                }
+
+                var price_uslug = 0;
+                $(".js_usluga").each(function(){
+                  price_uslug = price_uslug + parseInt($(this).text());
+                });
+                $("#uslugi_price").text(price_uslug);
+                $("#materials_price").text($("#total_materials").val());
+                total_money = parseInt(total_money)+parseInt($("#total_materials").val());
+
+                $("#itogo_price").text(price_uslug+parseInt($("#total_materials").val()));
+
+
+                $("textarea[name='primechaniya_to_main_form']").val($("#result_block").html());
+
+              } else {
+                alert("Введите верные значения для калькуляции");
+              }
+            };
+
+            function addMaterials(totalWeight,S,h){
+
+              var total_money = 0;
+              /*расчет тотального веса всего*/
+
+              // Ужас что приходится делать двумя строчками ниже...
+              $("#gvlv_list").hide();
+              $("#gsp_list").hide();
+
+              //расчет по старому тарифу "стандарт"
+              var pol_element_price = $("#price_mater_1").val();
+              var pol_element = (S/0.72) + (0.1*(S/0.72));
+              pol_element = Math.ceil(pol_element);
+              $("#js_element_knauf").show();
+              $("#js_element_gsp").hide();
+              var zasip_price = $("#price_mater_2").val();
+              $("#js_type_akz").hide();
+              $("#js_type_compevit").show();
+              $("#js_type_knauf").hide();
+              if (h>9) $("#gvlv_list").show();
+
+
+              /*Элемент пола*/
+
+              var pol_element_total = pol_element_price*pol_element;
+
+              total_money = total_money+pol_element_total;
+
+              var pol_element_weight = $("#price_ves_1").val();
+
+              $(".mater_1_count").text(pol_element);
+              $(".mater_1_total").text(pol_element_total);
+              totalWeight = totalWeight+pol_element_weight*pol_element;
+              /*Сухая засыпка*/
+
+              if (h > 11)
+              //если есть доп. слой или тип работ Премиум, то вычитаем 3 см на гипсоволокно
+                var zasip = S*h/100/40*105*10;
+              else
+              // var zasip = S*(h-2)/4;
+
+                var zasip = S*h/100/40*105*10;
+
+              zasip = Math.ceil(zasip);
+
+              var zasip_total = zasip_price*zasip;
+
+              total_money = total_money+zasip_total;
+
+              var zasip_weight = $("#price_ves_2").val();
+              $(".mater_2_count").text(zasip);
+              $(".mater_2_total").text(zasip_total);
+              totalWeight = totalWeight+zasip_weight*zasip;
+
+              /*клей ПВА*/
+
+              var PVA = (S * 0.07);
+              PVA = Math.ceil(PVA);
+
+              var PVA_price = $("#price_mater_3").val();
+
+              var PVA_total = PVA_price*PVA;
+
+              total_money = total_money+PVA_total;
+
+              var PVA_weight = 0;
+              $("#mater_3_count").text(PVA);
+              $("#mater_3_total").text(PVA_total);
+              totalWeight = totalWeight+PVA_weight*PVA;
+
+              /*4. Саморезы*/
+              /*тут цена указана за 10 штук, чтобы подогнать под нормальное значение, пришлось изменить формулу*/
+              var samorez = S*2;
+              samorez = Math.ceil(samorez);
+
+              var samorez_price = $("#price_mater_4").val();
+
+              var samorez_total = samorez_price*samorez;
+
+              total_money = total_money+samorez_total;
+
+              var samorez_weight = 0;
+              $("#mater_5_count").text(samorez*10);
+              $("#mater_5_total").text(samorez_total);
+              totalWeight = totalWeight+samorez_weight*samorez;
+
+              /*5. Кромочная лента*/
+              var lenta = S/20;
+              lenta = Math.ceil(lenta);
+
+              var lenta_price = $("#price_mater_5").val();
+
+              var lenta_total = lenta_price*lenta;
+
+              total_money = total_money+lenta_total;
+
+              var lenta_weight = 0;
+              $("#mater_4_count").text(lenta);
+              $("#mater_4_total").text(lenta_total);
+              totalWeight = totalWeight+lenta_weight*lenta;
+
+              /*6. Пленка*/
+
+              var plenka = S* 1.15;
+              plenka = Math.ceil(plenka);
+
+              var plenka_price = $("#price_mater_6").val();
+
+              var plenka_total = plenka_price*plenka;
+
+              total_money = total_money+plenka_total;
+
+              var plenka_weight = 0;
+              $("#mater_6_count").text(plenka);
+              $("#mater_6_total").text(plenka_total);
+              totalWeight = totalWeight+plenka_weight*plenka;
+
+              /*Гипсоволоконный лист*/
+
+              if ($("#gvlv_list").is(":visible")){
+                var gips = S/1.44;
+                gips = Math.ceil(gips)+1;
+
+                var gips_price = $("#price_mater_7").val();
+
+                var gips_total = gips_price*gips;
+
+                total_money = total_money+gips_total;
+
+                var gips_weight = 18;
+                $("#mater_7_count").text(gips);
+                $("#mater_7_total").text(gips_total);
+
+                totalWeight = totalWeight+gips_weight*gips;
+              }
+
+              /*ГСП лист*/
+
+              if ($("#gsp_list").is(":visible")){
+                var gips = S/1.875;
+                gips = Math.ceil(gips)+1;
+
+                var gips_price = $("#price_mater_68").val();
+
+                var gips_total = gips_price*gips;
+
+                total_money = total_money+gips_total;
+
+                var gips_weight = 18;
+                $("#mater_68_count").text(gips);
+                $("#mater_68_total").text(gips_total);
+
+                totalWeight = totalWeight+gips_weight*gips;
+              }
+
+              $("#total_materials").val(total_money);
+
+
+              if  ($("#dostavka").prop("checked")===false) {
+                return 0;
+              }
+
+              return totalWeight;
+            }
+
+            $(".js_get_description").mouseover(function(){
+              var type_id = $(this).attr('desc_id');
+
+              $("#js_type_description_"+type_id).show();
+            });
+            $(".js_get_description").mouseleave(function(){
+              $("#js_type_description_econom").hide();
+              $("#js_type_description_standart").hide();
+              $("#js_type_description_premium").hide();
+            })
+
+
+          </script>
+        </div>
+      </div>
+      <div class="column__center-bg">
+        <div class="column__center-inside"></div>
+      </div>
+      <div class="column__right-bg">
+        <div class="column__right-inside"></div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://bootstraptema.ru/plugins/2016/bootsnav/bootsnav.js"></script>
+<script>
+
+  // У типа работ "Премиум" минимальная высота сухой стяжки 5 см.
+  $("input[name='work_type']").on('change', function(){
+    if ($("input[name='work_type']:checked").val() == 'premium') {
+
+      if ($('.js-height_option_4').prop('selected'))
+        $('.js-height_option_5').prop('selected', 1);
+
+      $('.js-height_option_4').prop('disabled', 1);
+    } else
+      $('.js-height_option_4').prop('disabled', false);
+  });
+  $("input[name='work_type']").first().prop('checked', 1); // Выбрать всегда тип работ Эконом, что бы из кэша не восстановился
+
+
+  $(document).ready(function() {
+    $("textarea[name='primechaniya_to_main_form']").parent().parent().hide();
+    $(".js-form_calculate").hide();
+  });
+  $('#dostavka').click(function(){
+
+    if ($('#dostavka').prop("checked")===true){
+      $('#dostavka_block').show();
+    } else {
+      $('#dostavka_block').hide();
+    }
+  });
+  $('#destruction').click(function(){
+    if ($('#destruction').prop("checked")===true){
+      $('#destruction_block').show();
+    } else {
+      $('#destruction_block').hide();
+    }
+  });
+  $('#construction').click(function(){
+    if ($('#construction').prop("checked")===true){
+      $('#construction_block').show();
+    } else {
+      $('#construction_block').hide();
+    }
+  });
+
+  function validateFields(){
+
+    var valid = 1;
+    if ($("#block_0_square").val()<1 || $("#block_0_square").val()=='')
+      valid = 0;
+
+    if ($("#block_0_height").val() < 4 || $("#block_0_square").val() == '') {
+      valid = 0;
+    }
+
+    if (valid == 1){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  //Кнопка расчета
+  function CountMoney(){
+
+    if (validateFields() === true){
+
+      $("#result_block").show();
+      $(".js-form_calculate").show();
+
+      $(".td-material").text(0);
+      $(".uslugi_table").hide();
+      $(".js_usluga").text(0);
+      var total_weight = 0;
+
+      var total_money = 0;
+      //получим площадь помещения
+      var construct_square = $('#block_0_square').val();
+      //высота сухой стяжки
+      var styuj = $('#block_0_height').val();
+
+      // Тип работ
+      var work_type = 'standart';
+      var add_worck_type = (work_type=='premium') ? '_prem' : '';
+
+      // Рассчёт аренды инструментов
+      if (!$('#dostavka').prop("checked") && !$('#destruction').prop("checked") && !$('#construction').prop("checked")) {
+        $("#uslugi_arenda").show();
+        $("#arenda_kolvo").text(Math.ceil(construct_square/20));
+      }
+
+      if (styuj<12){
+        //без дополнительно слоя
+
+        var construct_money_price = Math.ceil(construct_square/10);
+
+        construct_money_price = construct_money_price*10;
+
+        if (construct_money_price>30){
+          construct_money_price = 40;
+        }
+
+        //стоимость сухой стяжки в зависимости от цены и типа работ
+        //   var construct_price = $('#price_construct_'+construct_money_price+add_worck_type).val();
+
+        if (construct_square <= 6) { var construct_price = 1500; }
+        if (construct_square >= 7 && construct_square >= 9)  { var construct_price = 820; }
+        if (construct_square >= 10 && construct_square >= 20)  { var construct_price = 720; }
+        if (construct_square >=21 )  { var construct_price = 500; }
+
+        //рассчитаем общую стоимость
+        var temp_price = construct_square*construct_price;
+
+        $("#montaj_kolvo").text(construct_square);
+
+        //спц обыспыливание поля вкючается при премиум
+        // $("#obesp_kolvo").text(construct_square);
+
+        //ст-сть стяжки за ед и общее
+        $("#montaj_price").text(construct_price);
+        $("#montaj_total").text(temp_price);
+
+        //показывает услуги монтажа
+        $("#usluga_montaj").show();
+        //количество в кг
+        total_weight = addMaterials(total_weight,construct_square,styuj);
+
+        total_money = total_money+parseInt(temp_price);
+        //расчет материалов
+      } else {
+        //с дополнительным слоем
+        var construct_money_price = Math.ceil(construct_square/10);
+
+        construct_money_price = construct_money_price*10;
+
+        if (construct_money_price>30){
+          construct_money_price = 40;
+        }
+        //   var construct_price = $('#price_construct_dop_'+construct_money_price+add_worck_type).val();
+
+        if (construct_square <= 6) { var construct_price = 1500; }
+        if (construct_square >= 7 && construct_square >= 9)  { var construct_price = 820; }
+        if (construct_square >= 10 && construct_square >= 20)  { var construct_price = 720; }
+        if (construct_square >=21 )  { var construct_price = 500; }
+
+
+
+
+        //рассчитаем стоимость
+        var temp_price = construct_square*construct_price;
+        $("#montaj_kolvo").text(construct_square);
+        $("#montaj_price").text(construct_price);
+        $("#montaj_total").text(temp_price);
+        $("#usluga_montaj").show();
+        total_money = total_money+parseInt(temp_price);
+        //добавим лист ГВЛВ
+
+        var list_price = $('#price_mater_7').val();
+        var list_kolvo = construct_square/ 1.44;
+
+        list_kolvo = list_kolvo+1;
+        temp_price = list_kolvo*list_price;
+
+        total_weight = addMaterials(total_weight,construct_square,styuj);
+
+        //добавили к цене листы
+        total_money = total_money+parseInt(temp_price);
+
+      }
+
+      //если включен демонтаж пола
+      if ($("#destruction").prop("checked")===true) {
+        //ДЕМОНТАЖ
+        //площадь демонтажа
+        var destruction_square = construct_square;
+        //тип покрытия
+        var destr_type = $('#block_2_pol_type option:selected').val();
+
+        var destruct_money_price = Math.ceil(destruction_square / 10);
+
+        destruction_money_price = destruct_money_price * 10;
+
+        if (destruction_money_price > 20) {
+          destruction_money_price = 30;
+        } else {
+          destruction_money_price = 20;
+        }
+
+        var destruction_price = $("#price_destruct_" + destr_type + "_" + destruction_money_price).val();
+
+        temp_price = destruction_square * destruction_price;
+        $("#demontaj_kolvo").text(destruction_square);
+        $("#demontaj_price").text(destruction_price);
+        $("#demontaj_total").text(temp_price);
+        $("#usluga_demontaj").show();
+        total_money = total_money + parseInt(temp_price);
+
+        var tarif_type = 1;
+
+        var tarif = $("#musor_" + tarif_type).val();
+
+        //Делим площадь демонтажа на объем одного контейнера
+
+        // зависимости от демонтируемого материала в контейнер влезает разное кол-во мусора
+        var cont_capacity = $("#block_2_pol_type option:selected").attr('conteriner');
+
+        var temp_cont = destruction_square / cont_capacity;
+        temp_money = Math.ceil(temp_cont) * tarif;
+        $("#musor_kolvo").text(Math.ceil(temp_cont));
+        $("#musor_price").text(tarif);
+        $("#musor_total").text(temp_money);
+
+        $("#usluga_vivoz").show();
+
+        total_money = total_money + parseInt(temp_money);
+      }
+
+      //если включена доставка
+      if ($("#dostavka").prop("checked")) {
+
+        //ДОСТАВКА
+        var car_price = $('#price_dostavka_1').val();
+
+        var za_mkad = $('#block_1_mkad').val();
+        //выБираем минимальный тариф
+        temp_price = 0;
+
+        total_money = total_money + total_weight*parseInt(car_price)+temp_price;
+
+
+        var lift_price = $("#price_razgruz_2").val();
+
+        var lift_flag = $("#block_1_lift").prop("checked");
+        if (lift_flag===true){
+          lift_price = $("#price_razgruz_1").val();
+        }
+        //перевод в тонны
+        total_weight_lift = total_weight/1000;
+
+        total_money_lift = total_weight_lift * lift_price;
+
+        if (total_money_lift<1500){
+          total_money_lift = 1500;
+        }
+
+        //todo непонятно как писать!!!
+        $("#dostavka_kolvo").text(total_weight/1000);
+
+        $("#dostavka_price").text(Math.ceil((parseInt(car_price) + parseInt(temp_price)) / total_weight*1000) + parseInt(total_money_lift));
+        $("#dostavka_total").text(parseInt(car_price) + parseInt(temp_price) + parseInt(total_money_lift));
+
+        var temp_total_materials = $("#total_materials").val();
+
+        $("#total_materials").val(parseInt($("#total_materials").val())+parseInt($("#dostavka_total").text()));
+        $("#material_text").text('Стоимость материалов с доставкой от:');
+        $("#usluga_dostavka").show();
+
+      } else {
+        $("#material_text").text('Стоимость материалов:');
+      }
+      //УКЛАДКА НАПОЛЬНОГО ПОКРЫТИЯ
+
+      //площадь
+      if ($("#construction").prop("checked")===true) {
+        var ukladka_square = construct_square;
+        //тип покрытия
+        var uklad_type = $('#block_3_pol_type option:selected').val();
+
+        var uklad_money_price = Math.ceil(ukladka_square / 10);
+
+        var ukladka_money_price = uklad_money_price * 10;
+
+        if (ukladka_money_price > 20) {
+          ukladka_money_price = 30;
+        } else {
+          ukladka_money_price = 20;
+        }
+
+        var ukladka_price = $("#price_uklad_" + uklad_type + "_" + ukladka_money_price).val();
+
+        temp_price = ukladka_square * ukladka_price;
+        $("#uklad_kolvo").text(ukladka_square);
+        $("#uklad_price").text(ukladka_price);
+        $("#uklad_total").text(temp_price);
+
+        $("#usluga_ukladka").show();
+        total_money = total_money + parseInt(temp_price);
+      }
+
+      var price_uslug = 0;
+      $(".js_usluga").each(function(){
+        price_uslug = price_uslug + parseInt($(this).text());
+      });
+      $("#uslugi_price").text(price_uslug);
+      $("#materials_price").text($("#total_materials").val());
+      total_money = parseInt(total_money)+parseInt($("#total_materials").val());
+
+      $("#itogo_price").text(price_uslug+parseInt($("#total_materials").val()));
+
+
+      $("textarea[name='primechaniya_to_main_form']").val($("#result_block").html());
+
+    } else {
+      alert("Введите верные значения для калькуляции");
+    }
+  };
+
+  function addMaterials(totalWeight,S,h){
+
+    var total_money = 0;
+    /*расчет тотального веса всего*/
+
+    // Ужас что приходится делать двумя строчками ниже...
+    $("#gvlv_list").hide();
+    $("#gsp_list").hide();
+
+    //расчет по старому тарифу "стандарт"
+    var pol_element_price = $("#price_mater_1").val();
+    var pol_element = (S/0.72) + (0.1*(S/0.72));
+    pol_element = Math.ceil(pol_element);
+    $("#js_element_knauf").show();
+    $("#js_element_gsp").hide();
+    var zasip_price = $("#price_mater_2").val();
+    $("#js_type_akz").hide();
+    $("#js_type_compevit").show();
+    $("#js_type_knauf").hide();
+    if (h>9) $("#gvlv_list").show();
+
+
+    /*Элемент пола*/
+
+    var pol_element_total = pol_element_price*pol_element;
+
+    total_money = total_money+pol_element_total;
+
+    var pol_element_weight = $("#price_ves_1").val();
+
+    $(".mater_1_count").text(pol_element);
+    $(".mater_1_total").text(pol_element_total);
+    totalWeight = totalWeight+pol_element_weight*pol_element;
+    /*Сухая засыпка*/
+
+    if (h > 11)
+    //если есть доп. слой или тип работ Премиум, то вычитаем 3 см на гипсоволокно
+      var zasip = S*h/100/40*105*10;
+    else
+    // var zasip = S*(h-2)/4;
+
+      var zasip = S*h/100/40*105*10;
+
+    zasip = Math.ceil(zasip);
+
+    var zasip_total = zasip_price*zasip;
+
+    total_money = total_money+zasip_total;
+
+    var zasip_weight = $("#price_ves_2").val();
+    $(".mater_2_count").text(zasip);
+    $(".mater_2_total").text(zasip_total);
+    totalWeight = totalWeight+zasip_weight*zasip;
+
+    /*клей ПВА*/
+
+    var PVA = (S * 0.07);
+    PVA = Math.ceil(PVA);
+
+    var PVA_price = $("#price_mater_3").val();
+
+    var PVA_total = PVA_price*PVA;
+
+    total_money = total_money+PVA_total;
+
+    var PVA_weight = 0;
+    $("#mater_3_count").text(PVA);
+    $("#mater_3_total").text(PVA_total);
+    totalWeight = totalWeight+PVA_weight*PVA;
+
+    /*4. Саморезы*/
+    /*тут цена указана за 10 штук, чтобы подогнать под нормальное значение, пришлось изменить формулу*/
+    var samorez = S*2;
+    samorez = Math.ceil(samorez);
+
+    var samorez_price = $("#price_mater_4").val();
+
+    var samorez_total = samorez_price*samorez;
+
+    total_money = total_money+samorez_total;
+
+    var samorez_weight = 0;
+    $("#mater_5_count").text(samorez*10);
+    $("#mater_5_total").text(samorez_total);
+    totalWeight = totalWeight+samorez_weight*samorez;
+
+    /*5. Кромочная лента*/
+    var lenta = S/20;
+    lenta = Math.ceil(lenta);
+
+    var lenta_price = $("#price_mater_5").val();
+
+    var lenta_total = lenta_price*lenta;
+
+    total_money = total_money+lenta_total;
+
+    var lenta_weight = 0;
+    $("#mater_4_count").text(lenta);
+    $("#mater_4_total").text(lenta_total);
+    totalWeight = totalWeight+lenta_weight*lenta;
+
+    /*6. Пленка*/
+
+    var plenka = S* 1.15;
+    plenka = Math.ceil(plenka);
+
+    var plenka_price = $("#price_mater_6").val();
+
+    var plenka_total = plenka_price*plenka;
+
+    total_money = total_money+plenka_total;
+
+    var plenka_weight = 0;
+    $("#mater_6_count").text(plenka);
+    $("#mater_6_total").text(plenka_total);
+    totalWeight = totalWeight+plenka_weight*plenka;
+
+    /*Гипсоволоконный лист*/
+
+    if ($("#gvlv_list").is(":visible")){
+      var gips = S/1.44;
+      gips = Math.ceil(gips)+1;
+
+      var gips_price = $("#price_mater_7").val();
+
+      var gips_total = gips_price*gips;
+
+      total_money = total_money+gips_total;
+
+      var gips_weight = 18;
+      $("#mater_7_count").text(gips);
+      $("#mater_7_total").text(gips_total);
+
+      totalWeight = totalWeight+gips_weight*gips;
+    }
+
+    /*ГСП лист*/
+
+    if ($("#gsp_list").is(":visible")){
+      var gips = S/1.875;
+      gips = Math.ceil(gips)+1;
+
+      var gips_price = $("#price_mater_68").val();
+
+      var gips_total = gips_price*gips;
+
+      total_money = total_money+gips_total;
+
+      var gips_weight = 18;
+      $("#mater_68_count").text(gips);
+      $("#mater_68_total").text(gips_total);
+
+      totalWeight = totalWeight+gips_weight*gips;
+    }
+
+    $("#total_materials").val(total_money);
+
+
+    if  ($("#dostavka").prop("checked")===false) {
+      return 0;
+    }
+
+    return totalWeight;
+  }
+
+  $(".js_get_description").mouseover(function(){
+    var type_id = $(this).attr('desc_id');
+
+    $("#js_type_description_"+type_id).show();
+  });
+  $(".js_get_description").mouseleave(function(){
+    $("#js_type_description_econom").hide();
+    $("#js_type_description_standart").hide();
+    $("#js_type_description_premium").hide();
+  })
+
+
+
+</script>
+
+<script>
+  function show(obj){
+    document.getElementById("#result_block").style.display="block";
+
+  }
+</script>
+
+</body>
+
+
+
+</html>
